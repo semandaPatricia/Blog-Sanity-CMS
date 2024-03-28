@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.36.1",
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
+    "next-sanity": "^7.1.4",
     "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanity": "^3.36.1",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.12",
