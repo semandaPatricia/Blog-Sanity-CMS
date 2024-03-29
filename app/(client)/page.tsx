@@ -1,7 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { Post } from "../utils/interface";
 import Header from "../components/Header";
-
+import PostComponent from "../components/PostComponent";
 async function getPosts() {
   const query = `
   *[_type == 'post'] {
@@ -23,7 +23,8 @@ export default async function Home() {
     <div>
    <Header title="Articles" tags />
     <div>
-<h1>welcome pat</h1>
+    {posts?.length > 0 &&
+          posts?.map((post) => <PostComponent key={post?._id} post={post} />)}
     </div>
   </div>
   );
