@@ -5,6 +5,8 @@ import { Post } from "@/app/utils/interface";
 import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 import Header from "@/app/components/Header";
+import Image from "next/image";
+import { urlForImage } from "@/sanity/lib/image";
 
 import { VT323 } from "next/font/google";
 
@@ -69,7 +71,10 @@ return (
       </div>
       
       <div className={richTextStyles}>
-       
+      <PortableText
+            value={post?.body}
+            components={myPortableTextComponents}
+          />
       </div>
     </div>
   </div>
@@ -79,6 +84,19 @@ return (
 export default page;
 
 
+const myPortableTextComponents = {
+    types: {
+      image: ({ value }: any) => (
+        <Image
+        src={urlForImage(value).toString()}
+          alt="Post"
+          width={500}
+          height={600}
+        />
+      ),
+    },
+  };
+  
 
   
   const richTextStyles = `
