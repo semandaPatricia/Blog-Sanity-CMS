@@ -1,5 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { Post } from "../utils/interface";
+import Header from "../components/Header";
 
 async function getPosts() {
   const query = `
@@ -20,7 +21,7 @@ export default async function Home() {
   console.log(posts, "posts");
   return (
     <div>
-  
+   <Header title="Articles" tags />
     <div>
 <h1>welcome pat</h1>
     </div>
