@@ -36,10 +36,10 @@ const cardStyle = `
 mb-8
 p-4
 border
-border-gray-900
+border-gray-700
 rounded-md
 shadow-sm
-shadow-purple-950
+shadow-pink-800
 hover:shadow-md
 hover:bg-pink-700
 hover:text-white
