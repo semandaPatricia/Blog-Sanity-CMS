@@ -1,4 +1,4 @@
-//import CmsNavbar from "../components/CmsNavbar";
+import CmsNavbar from "../components/CmsNavbar";
 import { Provider } from "../utils/Provider";
 import "./globals.css";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Provider>
-          
+          <CmsNavbar/>
           {children}
         </Provider>
       </body>
